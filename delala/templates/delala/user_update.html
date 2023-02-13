@@ -1,0 +1,6 @@
+<!-- user_update.html -->
+<h2>Update User</h2>
+<form method="post">
+	{% csrf_token %} {{ form.as_p }}
+	<button type="submit">Save</button>
+</form>

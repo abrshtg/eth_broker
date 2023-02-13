@@ -1,0 +1,25 @@
+<!-- broker_list.html -->
+<h2>Broker List</h2>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Phone</th>
+		<th>Actions</th>
+	</tr>
+	{% for broker in object_list %}
+	<tr>
+		<td>{{ broker.name }}</td>
+		<td>{{ broker.email }}</td>
+		<td>{{ broker.phone }}</td>
+		<td>
+			<a href="{% url 'broker_update' broker.id %}">Edit</a>
+			<a
+				href="{% url 'broker_delete' broker.id %}"
+				onclick="return confirm('Are you sure?');"
+				>Delete</a
+			>
+		</td>
+	</tr>
+	{% endfor %}
+</table>

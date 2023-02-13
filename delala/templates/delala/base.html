@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>My Personal Broker Website</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="{% url 'user_list' %}">Users</a></li>
+					<li><a href="{% url 'broker_list' %}">Brokers</a></li>
+					<li><a href="{% url 'property_list' %}">Properties</a></li>
+					<li><a href="{% url 'enquiry_list' %}">Enquiries</a></li>
+					<li><a href="{% url 'feedback_list' %}">Feedbacks</a></li>
+				</ul>
+			</nav>
+		</header>
+		{% block content %}{% endblock %}
+	</body>
+</html>
